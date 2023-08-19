@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function NavBar({ active }) {
     return (
-        <nav className="flex justify-between items-center bg-slate-900 px-4 py-2">
-            <ul id="links" className="flex items-end gap-14 text-slate-500">
+        <nav className="flex justify-between items-center bg-gray-400 px-4 py-2"> {/* Trocando a cor do fundo para cinza */}
+        <ul id="links" className="flex items-end gap-14 text-slate-950"> {/* Trocando a cor do texto para preto  */}
                 <li>
                     <Link href="/">
                         <h1 className="text-2xl font-bold text-slate-100">PetMania</h1>
