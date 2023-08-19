@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255,255,255 /* fonte cor*/
+  --foreground-rgb: 0,0,0 /* fonte cor*/
   --background-start-rgb: 214, 219, 220;/*1 parte da pagina */
   --background-end-rgb: 255, 255, 255; /*2 parte da pagina */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 203, 213, 225;
+    --foreground-rgb: 255, 255, 225;
     --background-start-rgb: 2, 6, 23;
     --background-end-rgb: 2, 6, 23;
   }
