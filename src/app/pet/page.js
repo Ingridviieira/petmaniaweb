@@ -6,8 +6,12 @@ export default function Pet() {
     <>
         <NavBar active={"pet"} />
 
+        <h1 style={{ fontSize: "120%", textAlign: "center" }}>
+            Acompanhe seu Pet
+        </h1>
+
         <main className="bg-slate-900 m-20 p-12">
-            <h2>Acompanhe seu Pet</h2>
+            <h2>Kira|Fêmea</h2>
         </main>
     </>
 
