@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <NavBar />
 
-      <main className=" bg-gray-400 m-20 p-12"  style={{ borderRadius: '90px', background: '#F8F1F1', boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
+      <main className=" m-20 p-12"  style={{ borderRadius: '90px', background: '#F8F1F1', boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
         <h2>Home</h2>
       </main>
     </>

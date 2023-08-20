@@ -17,3 +17,9 @@ export default function Pet() {
 
     )
 }
+
+
+// borderRadius: '90px',
+//  background: '#F8F1F1',
+//   boxShadow: '0px 4px 4px 0px
+// rgba(0, 0, 0, 0.25)
