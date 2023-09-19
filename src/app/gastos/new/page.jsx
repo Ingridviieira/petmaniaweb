@@ -1,6 +1,6 @@
 "use client"
 
-import { create } from "@/actions/contas";
+import { create } from "@/actions/gastos";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import NavBar from "@/components/NavBar";
@@ -48,7 +48,7 @@ export default function FormGastos() {
                     />
 
                     <div className="flex justify-around">
-                        <Button href="/contas" variant="secondary">
+                        <Button href="/gastos" variant="secondary">
                             <ChevronLeftIcon className="h-6 w-6 " />
                             cancelar
                         </Button>

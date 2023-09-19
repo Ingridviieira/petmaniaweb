@@ -21,12 +21,6 @@ export default function NavBar({ active }) {
                     </Link>
                 </li>
                 
-                {/* <li>
-                    <Link className={active=="adcAnimal" && "text-slate-300"} href="/adcAnimal">
-                    Adicionar Animal
-                    </Link>
-                </li> */}
-                
             </ul>
 
             {/* Foto do usuario  */}
