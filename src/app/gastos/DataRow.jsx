@@ -11,7 +11,7 @@ export default function DataRow({gastos}) {
             <div className="flex items-center">
                 <span>R$ 50.00</span>
                 <div className="invisible group-hover:visible">
-                    <DropMenu />
+                    <DropMenu gastosId={gastos.id}/>
                 </div>
             </div>
         </div>

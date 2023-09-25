@@ -28,4 +28,50 @@ export async function create(formData){
 export async function getGastos() {
     const resp = await fetch(url)
     return resp.json()
+}
+
+export async function destroy(id){
+
+    const urlDelete = url + "/" + id
+
+    const options = {
+        method: "DELETE"
     }
+
+    const resp = await fetch(urlDelete, options)
+
+    if (resp.status !== 204)
+        return {error: "Erro ao apagar gasto. " + resp.status}
+
+    revalidatePath("/gastos")
+}
+
+export async function getGasto(id){ // Renomeada de getGastos para getGasto
+    const getUrl = url + "/" + id
+
+    const resp = await fetch(getUrl)
+
+    if(resp.status !== 200)
+        return {error: "Erro ao buscar dados gastos"}
+
+    return await resp.json()
+}
+
+export async function update(gastos){
+    const updateUrl = url + "/" + gastos.id
+
+    const options = {
+        method: "PUT",
+        body: JSON.stringify( gastos ),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+
+    const resp = await fetch(updateUrl, options)
+
+    if(resp.status !== 200)
+        return {error: "erro ao atualizar gasto"}
+
+    revalidatePath("/gastos")
+}
