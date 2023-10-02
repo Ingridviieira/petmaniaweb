@@ -40,7 +40,7 @@ export default function NavBar({ active }) {
             <div className="flex items-center gap-2">
                 <span>{user?.email}</span>
                 <div className="h-12 w-12 rounded-full overflow-hidden">
-                    <img src="img.freepik.com/fotos-premium/close-up-do-macaco-mixedbreed-entre-o-chimpanze-e-o-bonobo-sorrindo_191971-22824.jpg?w=740" alt="avatar do usuário" />
+                    <img src="https://i0.statig.com.br/bancodeimagens/bx/ry/fv/bxryfvt3vi76x0obfhixvrj8x.jpg" alt="avatar do usuário" />
                 </div>
                 <Button onClick={handleLogout} type="button">logout</Button>
             </div>
