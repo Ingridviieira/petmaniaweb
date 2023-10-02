@@ -1,6 +1,20 @@
+"use client"
+
+import { AuthContext } from "@/contexts/AuthContext";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import Button from "./Button";
 
 export default function NavBar({ active }) {
+    const { user, logout } = useContext(AuthContext)
+    const { push } = useRouter()
+
+    function handleLogout(){
+        logout()
+        push("/login")
+    }
+
     return (
         <nav className="flex justify-between items-center bg-gray-400 px-4 py-2"> {/* Trocando a cor do fundo para cinza */}
         <ul id="links" className="flex items-end gap-14 text-slate-950"> {/* Trocando a cor do texto para preto  */}
@@ -23,9 +37,12 @@ export default function NavBar({ active }) {
                 
             </ul>
 
-            {/* Foto do usuario  */}
-            <div className="h-12 w-12 rounded-full overflow-hidden">
-                <img src="https://img.freepik.com/fotos-premium/close-up-do-macaco-mixedbreed-entre-o-chimpanze-e-o-bonobo-sorrindo_191971-22824.jpg?w=740" alt="avatar do usuário" />
+            <div className="flex items-center gap-2">
+                <span>{user?.email}</span>
+                <div className="h-12 w-12 rounded-full overflow-hidden">
+                    <img src="img.freepik.com/fotos-premium/close-up-do-macaco-mixedbreed-entre-o-chimpanze-e-o-bonobo-sorrindo_191971-22824.jpg?w=740" alt="avatar do usuário" />
+                </div>
+                <Button onClick={handleLogout} type="button">logout</Button>
             </div>
         </nav>
     )

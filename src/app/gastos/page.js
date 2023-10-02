@@ -20,7 +20,7 @@ export default async function Gastos() {
             </div>
             
             <div id="data">
-                {gastos.map(gastos => <DataRow key={gastos.id} gastos={gastos} />)}
+                {gastos?.map(gasto => <DataRow key={gasto.id} gasto={gasto} />)}
             </div>
         </main>
     </>
